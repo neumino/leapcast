@@ -52,4 +52,5 @@ def parse_cmd():
 
 def generate_uuid():
     Environment.uuid = str(uuid.uuid5(
-        uuid.NAMESPACE_DNS, ('device.leapcast.%s' % Environment.friendlyName).encode('utf8')))
+        uuid.NAMESPACE_DNS, ('device.leapcast.%s' %
+                             Environment.friendlyName).encode('utf8')))
