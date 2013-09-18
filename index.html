@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Leapcast by dz0ny</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Leapcast</h1>
+        <h2>ChromeCast emulation app for any device</h2>
+        <a href="https://github.com/dz0ny/leapcast" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="leapcast" class="anchor" href="#leapcast"><span class="octicon octicon-link"></span></a>leapcast</h1>
+
+<p><a href="https://flattr.com/submit/auto?user_id=dz0ny&amp;url=https://github.com/dz0ny/leapcast&amp;title=Leapcast&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this git repo"></a> 
+<img src="http://screencloud.net//img/screenshots/3c17671ad386247d7dbd2f7395c4df77.png" alt="Google Music" title="Google Music"></p>
+
+<p>Simple ChromeCast emulation app.</p>
+
+<p>Working:</p>
+
+<ul>
+<li>Discovery (DIAL protocol <a href="http://www.dial-multiscreen.org/">http://www.dial-multiscreen.org/</a>)</li>
+<li>Youtube</li>
+<li>Google Music</li>
+<li>TicTacToe</li>
+<li>ChromeCast</li>
+</ul><p>On real device enabled apps are fetched from <a href="https://clients3.google.com/cast/chromecast/device/config">https://clients3.google.com/cast/chromecast/device/config</a> .
+Bugs in ChromeCast SDK are listed at <a href="https://code.google.com/p/google-cast-sdk/issues/list?can=2&amp;q=&amp;sort=priority&amp;colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary">https://code.google.com/p/google-cast-sdk/issues/list?can=2&amp;q=&amp;sort=priority&amp;colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary</a> </p>
+
+<p>Some known bugs in ChromeCast SDK:</p>
+
+<ul>
+<li>Discovery fails on some devices with multiple unactive network interfaces </li>
+<li>Scanning crashes device or app with ConcurrentModificationException </li>
+</ul><h2>
+<a name="how-to-install" class="anchor" href="#how-to-install"><span class="octicon octicon-link"></span></a>How to install</h2>
+
+<h3>
+<a name="simple" class="anchor" href="#simple"><span class="octicon octicon-link"></span></a>Simple</h3>
+
+<p>Clone this directory, then run <code>python setup.py develop</code> or <code>pip install https://github.com/dz0ny/leapcast/archive/master.zip</code></p>
+
+<h3>
+<a name="better" class="anchor" href="#better"><span class="octicon octicon-link"></span></a>Better</h3>
+
+<pre><code>git clone https://github.com/dz0ny/leapcast.git
+cd ./leapcast
+sudo apt-get install virtualenvwrapper python-pip python-twisted-web python2.7-dev
+mkvirtualenv leapcast
+pip install .
+</code></pre>
+
+<h4>
+<a name="windows" class="anchor" href="#windows"><span class="octicon octicon-link"></span></a>Windows</h4>
+
+<p>For those on Windows(tm) follow this guide <a href="https://gist.github.com/eyecatchup/6219118">https://gist.github.com/eyecatchup/6219118</a> or <a href="https://plus.google.com/100317092290545434762/posts/8RjWfMXxje8">https://plus.google.com/100317092290545434762/posts/8RjWfMXxje8</a></p>
+
+<pre><code>usage: leapcast [-h] [-d] [--name NAME] [--user_agent USER_AGENT]
+                [--chrome CHROME] [--fullscreen]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d                    Debug
+  --name NAME           Friendly name for this device
+  --user_agent USER_AGENT
+                        Custom user agent
+  --chrome CHROME       Path to Google Chrome executable
+  --fullscreen          Start in full-screen mode
+  --window_size         Force the initial window size (eg 1920,1080)
+
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/dz0ny/leapcast/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/dz0ny/leapcast/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/dz0ny/leapcast"></a> is maintained by <a href="https://github.com/dz0ny">dz0ny</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
