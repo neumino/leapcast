@@ -8,6 +8,7 @@ from leapcast.environment import Environment
 import tornado.web
 import threading
 from __builtin__ import id
+import subprocess
 
 
 class App(object):
@@ -331,4 +332,12 @@ class CastPlatform(tornado.websocket.WebSocketHandler):
     '''
 
     def on_message(self, message):
-        pass
+        cmd = json.loads(message)
+        if cmd["type"] == "SET_VOLUME":
+            # Add if statements when there will be more systems
+            try:
+                args = ["pactl", "set-sink-volume", Environment.pulse]
+                args.append(str(int(cmd["level"]*100))+"%")
+                subprocess.call(args)
+            except:
+                pass

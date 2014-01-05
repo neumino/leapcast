@@ -17,7 +17,8 @@ class Environment(object):
     interface = None
     uuid = None
     ips = []
-    verbosity = logging.INFO
+    pulse = "0" # Index or name of the server.
+    verbosity = logging.WARN
 
 
 def parse_cmd():
@@ -32,6 +33,7 @@ def parse_cmd():
     parser.add_argument('--window_size',
                         default=False, help='Set the initial chrome window size. eg 1920,1080')
     parser.add_argument('--ips', help='Allowed ips')
+    parser.add_argument('--pulse', help='PulseAudio sound server')
     args = parser.parse_args()
 
     if args.name:
@@ -54,6 +56,9 @@ def parse_cmd():
 
     if args.ips:
         Environment.ips = args.ips
+
+    if args.pulse:
+        Environment.pulse = args.pulse
 
     if args.d:
         Environment.verbosity = logging.DEBUG
